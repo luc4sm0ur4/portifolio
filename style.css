@@ -1,0 +1,236 @@
+/* ==================================================
+   RESET & BASE
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ==================================================
+   THEMES
+================================================== */
+
+/* DARK */
+:root[data-theme="dark"] {
+  --bg-main: radial-gradient(circle at top, #0b1020 0%, #070b18 60%);
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --text-main: #e6eaf2;
+  --text-muted: #aab0c0;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+}
+
+/* LIGHT */
+:root[data-theme="light"] {
+  --bg-main: #f6f7fb;
+  --bg-card: #ffffff;
+  --border-card: #e2e6f0;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+}
+
+/* ==================================================
+   LAYOUT
+================================================== */
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.logo {
+  width: 72px;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 1rem 0 1.25rem;
+  color: var(--text-muted);
+}
+
+/* ==================================================
+   BADGES
+================================================== */
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+}
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.cta {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border-card);
+  text-decoration: none;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--accent-hover);
+}
+
+/* ==================================================
+   TOGGLES
+================================================== */
+
+#theme-toggle,
+#lang-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.6rem;
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+#lang-toggle {
+  right: 3.5rem;
+}
+
+/* ==================================================
+   CARDS & GRIDS
+================================================== */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 0.8rem;
+  padding: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 2rem 1rem;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero h1 span {
+    font-size: 1.2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+}
