@@ -79,8 +79,16 @@ section h2 {
 }
 
 .logo {
-  width: 72px;
+  width: 140px;
+  height: auto;
+  border-radius: 16px;   /* bordas levemente arredondadas */
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 200px;
+  }
 }
 
 .hero h1 {
